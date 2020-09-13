@@ -1,0 +1,37 @@
+<div>
+
+  <div class="box">
+    <div>
+      <input (keydown.enter) = "addTask()" [(ngModel)] = "taskContent">
+      <button (click) = "addTask()">Add task</button>
+    </div>
+  </div>
+
+  <div class="box">
+
+    <div>
+      <p *ngIf="taskList.length == 0">No tasks here for now.</p>
+      <ul>
+        <li class="list" *ngFor="let task of taskList">
+          {{task}}
+        <div>
+          <button (click) = "removeTask(task)">Remove</button>
+          <button (click) = "doneTask(task)">Done</button>
+        </div>  
+          
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <p>Done tasks: {{doneList.length}} </p>
+      <ul>
+        <li *ngFor="let task of doneList">
+          {{task}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+</div>

@@ -1,0 +1,20 @@
+.box{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    margin-left: 20px;
+    margin-bottom: 5px;
+    background-color: rgb(247, 168, 168);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
